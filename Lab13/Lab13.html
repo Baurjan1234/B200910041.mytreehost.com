@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 13 | B200910041</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <ul>
+        <li><a href="" onclick="getPageByGetMethod(event)">Ajax JSON</a></li>
+        <li>
+          <a href="#" onclick="postData(event)"> <strong> Ajax POST</strong></a>
+        </li>
+        <li><a href="#" onclick="getJson(event)">Ajax GET JSON</a></li>
+      </ul>
+    </div>
+    <div id="main">Энд дархад AJAX Мэдээлэл харагдана</div>
+    <script>
+      let xmlhttp;
+      if (2 & 1) {
+        alert("true");
+      }
+      if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      
+      let mainDiv = document.getElementById("main");
+      function getPageByGetMethod(event) {
+        event.preventDefault();
+        console.log("xmlhttp.responseText");
+        // partials\ajax-get.html
+        xmlhttp.open("GET", "partials/ajax-get.html", false);
+        xmlhttp.send();
+        console.log("xmlhttp.responseText");
+        mainDiv.innerHTML = xmlhttp.responseText;
+      }
+      function getJson(event) {
+        event.preventDefault();
+        // console.log("getJson");
+        xmlhttp.open("GET", "partials/student.json", false);
+        xmlhttp.send();
+        // partials\student.json
+        table = document.createElement("table");
+
+        student = JSON.parse(xmlhttp.responseText);
+        for (let i in student) {
+          row = document.createElement("tr");
+          data1 = document.createElement("td");
+          data1.innerHTML = student[i].code;
+          data2 = document.createElement("td");
+          data2.innerHTML = student[i].name;
+          row.appendChild(data1);
+          row.appendChild(data2);
+          table.appendChild(row);
+        }
+        mainDiv.appendChild(table);
+      }
+      function postData(event) {
+        event.preventDefault();
+        $(document).ready(function () {
+          $("strong").click(function () {
+            $.get("partials/ajax-post.html", function (data, status) {
+              alert("Data: " + data + "\nStatus: " + status);
+            });
+          });
+        });
+      }
+
+      // post
+    </script>
+  </body>
+</html>

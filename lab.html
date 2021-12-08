@@ -123,6 +123,16 @@
           "Lab01/lab01.html",
           "Lab02/lab02.html",
           "Lab03/lab03.html",
+          "Lab04/lab04.html",
+          "Lab05/lab05.html",
+          "Lab06/lab06.html",
+          "Lab07/Lab07.html",
+          "Lab08/Lab08.html",
+          "Lab09/Lab09.html",
+          "Lab10/Lab10.html",
+          "Lab11/Lab11.html",
+          "Lab12/Lab12.html",
+          "Lab13/Lab13.html",
         ];
         let bol = false;
         let count = 0;
@@ -151,9 +161,8 @@
               console.log(xmlhttp.responseText);
 
               let a = htmlTag[i];
-              el.innerHTML = xmlhttp.response;
-
-              el.innerHTML = `<div style="margin: auto; padding: 2rem; text-align: center">
+              el.innerHTML =
+                el.innerHTML = `<div style="margin: auto; padding: 2rem; text-align: center">
                 <iframe  src=${htmlTag[i]} name="myframe" frameborder="0" width="80%" height="550px"  ></iframe>;
                 
                 </div>`;

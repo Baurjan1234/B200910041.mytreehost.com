@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory 09 || B200910041 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="cv" onsubmit="print(event)">
+
+        <table width="100%">
+            <tr id="undes">
+              <th
+                colspan="6"
+                style="font-size: 20px; background-color: rgb(168, 158, 158)"
+              >
+                Үндсэн мэдээлэл 
+              </th>
+            </tr>
+            <tr>
+              <th align="center" >Ургийн овог:</th>
+              <td>
+                <input type="text" name="family_name" />
+              </td>
+              <th align="left" >Овог:</th>
+              <td>
+                <input type="text" name="last_name" />
+              </td>
+    
+              <th align="center">Нэр:</th>
+              <td>
+                <input type="text" name="first_name" />
+              </td>
+            </tr>
+            <tr>
+              <th align="center">Регистер:</th>
+              <td>
+                <input type="text" name="register" />
+              </td>
+              <th align="left">Төрсөн он:</th>
+              <td><input type="date" name="birth_date" /></td>
+              <th align="center">Хүйс:</th>
+              <td>
+                <label
+                  ><input
+                  checked
+
+                    type="radio"
+                    value="Эрэгтэй"
+                    name="gender"
+                  />Эрэгтэй</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    value="Эмэгтэй"
+                    name="gender"
+                  />Эмэгтэй</label
+                >
+              </td>
+            </tr>
+            <tr width="100%">
+              <th align="center">Утас:</th>
+              <td>
+                <input type="number" name="phone" />
+              </td>
+              <th align="left">Төрсөн газар:</th>
+              <td>
+                <select name="city" id="ddlViewBy" style="width: 178px">
+                  <option value="УБ">--</option>
+                  <option value="УБ">Улаанбаатар</option>
+                  <option value="ДА">Дархан</option>
+                  <option value="ОХ">Орхон</option>
+                </select>
+              </td>
+              <td align="center">
+                <label for="" align="center"><strong>И-мэйл</strong> </label>
+              <td ><input type="email" name="mail" /></td>
+    
+              </td>
+            </tr>
+            <tr>
+              <td align="center" >
+                <label for="" align="center">
+                  <input type="checkbox" /><strong>Миний тухай дэлгэрэнгүй</strong>
+                </label>
+              </td>
+              <td colspan="4" ><input type="text" name="texts" style="width: 500px; color: brown;"/></td>
+              
+            </tr>
+        </table>
+        <button type="submit"> Илгээх</button>
+
+
+    </form>
+
+      <div id="cv"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>VS</title>
+    <style>
+      #left,
+      #right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        cursor: pointer;
+      }
+
+      #left {
+        left: 0;
+        background-color: #eee;
+      }
+      #right {
+        right: 0;
+        background-color: #900;
+      }
+
+      #left div,
+      #right div,
+      #vs {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        border-radius: 50%;
+        margin: -50px;
+        /* transform: translate(-50px, -50px); */
+      }
+
+      #left div {
+        background-color: #900;
+        color: #eee;
+      }
+
+      #right div {
+        background-color: #eee;
+        color: #900;
+      }
+
+      #vs {
+        background-color: #000;
+        color: #fff;
+        box-shadow: 2px 2px 5px #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="left" onclick="left_click()"><div>0</div></div>
+    <div id="right" onclick="right_click()"><div>0</div></div>
+    <div id="vs">VS</div>
+    <script>
+      left = 0;
+      right = 0;
+      leftDiv = document.getElementById("left");
+      rightDiv = document.getElementById("right");
+      vs = document.getElementById("vs");
+      function left_click() {
+        leftDiv.firstChild.innerHTML = ++left;
+        refresh();
+      }
+
+      function right_click() {
+        rightDiv.firstChild.innerHTML = ++right;
+        refresh();
+      }
+
+      function refresh() {
+        leftDiv.style.width = 50 + left - right + "%";
+        rightDiv.style.width = 50 - left + right + "%";
+        vs.style.left = 50 + left - right + "%";
+        // vs.style.right = (50 - left + right) + '%';
+      }
+      // Keyboard button L, R
+      window.addEventListener("keydown", press_key, false);
+      function press_key(key) {
+        // Left L дарах үед ажиллах
+        if (key.keyCode == 76) {
+          leftDiv.firstChild.innerHTML = ++left;
+          refresh();
+        }
+        // Right R дарах үед ажиллах
+        if (key.keyCode == 82) {
+          rightDiv.firstChild.innerHTML = ++right;
+          refresh();
+        }
+      }
+    </script>
+  </body>
+</html>

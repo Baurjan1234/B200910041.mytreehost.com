@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header {
+  background-color: rgb(243, 53, 53);
+  color: #fff;
+}
+.logo {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+.logo h1,
+.logo p {
+  line-height: 1.2;
+}
+.logo h1 {
+  font-size: 2.5rem;
+}
+.mainmenu {
+  background-color: brown;
+}
+.mainmenu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  background-color: brown;
+  border-bottom: 0.3rem solid #ddd;
+}
+.mainmenu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 0.5rem 1.2rem;
+}
+.active {
+  background-color: #eee;
+}
+.active a {
+  color: brown;
+}
+.widget {
+  height: 10rem;
+}
+.widget1 {
+  background-color: #ccc;
+}
+.widget2 {
+  background-color: #bbb;
+}
+.widget3 {
+  background-color: #aaa;
+}
+.widget4 {
+  background-color: #999;
+}
+.widget5 {
+  background-color: #888;
+}
+.widget6 {
+  background-color: #ccbbbb;
+}
+.widget7 {
+  background-color: #ccaaaa;
+}
+.widget8 {
+  background-color: #cc9999;
+}
+.widget9 {
+  background-color: #cc8888;
+}
+.left,
+.right {
+  width: 25%;
+}
+.right .hidden {
+  /* display: none; */
+  visibility: hidden;
+}
+.wrapper .widget {
+  margin: 0.5rem 0;
+}
+.main {
+  width: 50%;
+  background-color: rgb(168, 166, 166);
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.main .teaser {
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #888;
+}
+.body .wrapper {
+  display: flex;
+}
+.footer {
+  background: rgb(59, 57, 57);
+  color: #ccc;
+}
+.footer .footermenu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  border-bottom: 0.2rem solid #888;
+}
+.footer .footermenu a {
+  text-decoration: none;
+  color: #ccc;
+  display: block;
+  padding: 0.5rem 1.2rem;
+}
+.footer p {
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 999px) {
+  .wrapper {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .wrapper {
+    width: 720px;
+  }
+  .mainmenu a {
+    padding: 0.5rem 0.8rem;
+  }
+  .wrapper .left {
+    display: none;
+  }
+  .right {
+    width: 40%;
+  }
+  .right .hidden {
+    visibility: visible;
+  }
+  /* .logo h1,
+  .logo p {
+    margin: 0 12rem;
+  } */
+}
+@media screen and (max-width: 700px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .mainmenu .wrapper {
+    display: none;
+  }
+  .wrapper .right {
+    display: none;
+  }
+  .main {
+    width: 100%;
+  }
+  .main .teaser {
+    width: 100%;
+    display: flex;
+  }
+  .main .teaser img {
+    height: 5rem;
+  }
+  .main .teaser h3,
+  .main .teaser p {
+    margin-left: 1rem;
+  }
+  .mainmenu::before {
+    content: "Цэс";
+    margin: 1rem;
+  }
+  .mainmenu:hover ul {
+    display: block;
+  }
+  .footer .footermenu {
+    display: none;
+  }
+}

@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+@keyframes skyscreen {
+  from {
+    background-color: #d1eefc;
+  }
+  to {
+    background-color: rgb(1, 1, 168);
+  }
+}
+@keyframes movemountain {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.screen {
+  position: relative;
+  height: 400px;
+  background-color: #cceeff;
+  overflow: hidden;
+  animation: skyscreen 30s ease-out infinite alternate;
+}
+.mountain {
+  width: 100%;
+  height: 600px;
+  background-color: green;
+  border-radius: 50% 50%;
+  position: absolute;
+  bottom: -410px;
+  animation: movemountain 30s ease-out infinite reverse;
+}
+.dog {
+  background-image: url(../img/nohoi.svg);
+  height: 150px;
+  width: 265px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-position: 50% 50%; */
+  position: absolute;
+  /* top: 50%; */
+  left: 40%;
+  bottom: 0;
+  transform: translate(0, 0);
+  z-index: 1;
+  animation: sespension 0.5s linear infinite alternate;
+}
+
+@keyframes but1 {
+  from {
+    left: -5%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.but1 {
+  display: block;
+  height: 63px;
+  width: 113px;
+  background-image: url(../img/but1.svg);
+  position: absolute;
+  bottom: 0;
+  left: -113px;
+  animation: but1 8s linear infinite reverse;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.but2 {
+  height: 61px;
+  width: 124px;
+  background-image: url(../img/but2.svg);
+  position: absolute;
+  bottom: 0;
+  left: -124px;
+  animation: but1 8s linear 2s infinite reverse;
+}
+.but3 {
+  height: 53px;
+  width: 152px;
+  background-image: url(../img/but3.svg);
+  position: absolute;
+  bottom: 0;
+  left: -152px;
+  animation: but1 8s linear 4s infinite reverse;
+}
+@keyframes mod1 {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.mod1 {
+  display: block;
+  width: 202px;
+  height: 231px;
+  background-image: url(../img/mod1.svg);
+  position: absolute;
+  bottom: 0;
+  left: -203;
+  /* z-index: 1; */
+  animation: mod1 15s linear infinite reverse;
+}
+.mod2 {
+  display: block;
+  width: 202px;
+  height: 231px;
+  background-image: url(../img/mod2.svg);
+  position: absolute;
+  bottom: 0;
+  left: -203px;
+  /* z-index: 1; */
+  animation: mod1 15s linear 5s infinite reverse;
+}
+.mod3 {
+  display: block;
+  width: 171px;
+  height: 200px;
+  background-image: url(../img/mod3.svg);
+  position: absolute;
+  bottom: 0;
+  left: -203px;
+  /* z-index: 1; */
+  animation: mod1 15s linear 10s infinite reverse;
+}
+
+@keyframes sespension {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+.road {
+  /* width: 100%; */
+  display: flex;
+  height: 50px;
+  background-color: rgb(71, 59, 59);
+}
+.square {
+  position: relative;
+  /* margin: 5px; */
+  height: 10px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  top: 0.5rem;
+  animation: mod1 8s linear infinite reverse;
+}
+.square2 {
+  position: relative;
+  /* margin: 5px; */
+  height: 10px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  left: -200px;
+  top: 0.5rem;
+  animation: mod1 8s linear 2s infinite reverse;
+}
+.square3 {
+  position: relative;
+  /* margin: 5px; */
+  height: 10px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  left: -400px;
+  top: 0.5rem;
+  animation: mod1 8s linear 4s infinite reverse;
+}

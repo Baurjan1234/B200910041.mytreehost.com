@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.info {
+  background-color: silver;
+  color: black;
+  font-size: 32px;
+  padding: 10px 20px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0 0 10px 0;
+}
+#display {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  /* display tag-аас координатаа авах ёстой учир display postion relative болгох */
+  position: relative;
+}
+
+.bubble {
+  /* Хамгийн ойрын relative буюу display object-оос байршилаас авна */
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  background-color: #f00;
+  width: 50px;
+  height: 50px;
+  /* radius өргөний хагас */
+  border-radius: 50px;
+  /* border-radius: 50%; */
+}
+
+.bubble div {
+  /* бөмбөлгийн эхээс зай авах */
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+button {
+  background-color: rgb(211, 211, 211);
+  color: black;
+  font-size: 32px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 0 25px;
+}
+
+#text {
+  background-color: #f00;
+  position: absolute;
+  left: 500px;
+  top: 500px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.firework {
+  position: absolute;
+}
+
+.explosion {
+  position: absolute;
+  left: -2px;
+  bottom: 0;
+  width: 4px;
+  height: 80px;
+  transform-origin: 50% 100%;
+  /* background-color: rgba(0,0,0,.2); */
+  overflow: hidden;
+}
+/* fireWork */
+.explosion:nth-child(1) {
+  transform: rotate(0deg) translateY(-15px);
+}
+.explosion:nth-child(2) {
+  transform: rotate(30deg) translateY(-15px);
+}
+.explosion:nth-child(3) {
+  transform: rotate(60deg) translateY(-15px);
+}
+.explosion:nth-child(4) {
+  transform: rotate(90deg) translateY(-15px);
+}
+.explosion:nth-child(5) {
+  transform: rotate(120deg) translateY(-15px);
+}
+.explosion:nth-child(6) {
+  transform: rotate(150deg) translateY(-15px);
+}
+.explosion:nth-child(7) {
+  transform: rotate(180deg) translateY(-15px);
+}
+.explosion:nth-child(8) {
+  transform: rotate(210deg) translateY(-15px);
+}
+.explosion:nth-child(9) {
+  transform: rotate(240deg) translateY(-15px);
+}
+.explosion:nth-child(10) {
+  transform: rotate(270deg) translateY(-15px);
+}
+.explosion:nth-child(11) {
+  transform: rotate(300deg) translateY(-15px);
+}
+.explosion:nth-child(12) {
+  transform: rotate(330deg) translateY(-15px);
+}
+.explosion::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 40px;
+  background-color: #f5cf52;
+}
+@keyframes explosion {
+  0% {
+    top: 100%;
+  }
+  33%,
+  100% {
+    top: -50%;
+  }
+}
+
+#firework3 {
+  position: absolute;
+  left: 500px;
+  top: 500px;
+  transform: scale(0.8);
+}
+#firework3 .explosion::before {
+  animation: explosion 1s ease-in-out;
+}

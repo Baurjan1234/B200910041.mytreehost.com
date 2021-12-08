@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  /* padding: 0; */
+  margin: 0;
+}
+
+/* Header */
+div.header {
+  /* background: rgb(218, 129, 129); */
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#logo img {
+  height: 30px;
+}
+#mainmenu {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+#mainmenu a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #000;
+}
+/* Зүүн хэсэг*/
+div.contant {
+  padding: 2rem;
+  width: 70%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 1rem;
+  /* background: rgb(232, 229, 235); */
+  height: 39rem;
+}
+.tovch-medee {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.tovch-medee img {
+  height: 10rem;
+}
+.tovch-medee > div {
+  flex-grow: 1;
+}
+.tovch-medee h3 {
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.tovch-medee div a {
+  list-style: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.tovch-medee p {
+  padding: 0 2rem;
+}
+
+/* баруун хэсэг */
+.right {
+  width: 30%;
+  height: 39rem;
+  padding: 1rem 0;
+  margin: 1rem 1rem 1rem 0;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.tovch-medee-2 img {
+  height: 4.5rem;
+}
+
+.tovch-medee-2 h2 {
+  text-align: center;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+}
+.tovch-medee-2 > div {
+  padding: 0 2rem;
+}
+.tovch-medee-2 > div a {
+  text-decoration: none;
+  color: #000;
+}
+.tovch-medee-2 > div h3 {
+  padding: 0 2rem;
+}
+
+.tovch-medee-2 .medeelel {
+  margin-top: 0.5rem;
+  display: flex;
+}
+div.display {
+  display: flex;
+}
+
+/* footer хэсэг */
+div.footer {
+  margin: 0 1rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.footer p {
+  text-align: center;
+  padding: 1rem;
+}

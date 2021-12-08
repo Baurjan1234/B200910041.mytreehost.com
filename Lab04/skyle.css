@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header,
+.contant,
+.right,
+.footer {
+  padding: 10px;
+  font-weight: bold;
+  border: 2px solid;
+  margin: 0.3rem;
+  border-radius: 5px;
+}
+div.header {
+  background: rgb(218, 129, 129);
+  text-align: center;
+  height: 5rem;
+}
+
+div.contant {
+  width: 70%;
+
+  background: rgb(193, 132, 233);
+  height: 40rem;
+}
+div.right {
+  width: 30%;
+
+  background: rgb(235, 236, 139);
+  height: 40rem;
+}
+div.footer {
+  background-color: aquamarine;
+  height: 80px;
+}
+
+div.display {
+  display: flex;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Бауржан | Холбоо барих</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container flex">
+        <h1 class="logo">UB Site</h1>
+        <nav>
+          <ul>
+            <li><a href="Lab08.html">Нүүр</a></li>
+            <li><a href="features.html">Онцлог</a></li>
+            <li><a href="contact.html">Холбоо барих</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Head -->
+    <section class="docs-head bg-primary py-1">
+      <div class="container grid">
+        <div>
+          <h1 class="xl">Холбоо барих</h1>
+          <p class="lead"></p>
+        </div>
+
+        <img src="images/docs.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Docs main -->
+    <section class="contact container">
+      <div class="showcase-form card">
+        <p class="lead">Доорх талбаруудыг бөглөн бидэнтэй холбоо барина уу?</p>
+        <form>
+          <div class="form-control">
+            <input type="text" name="name" placeholder="Нэр" required />
+          </div>
+          <div class="form-control">
+            <input type="email" name="company" placeholder="И-мэйл" required />
+          </div>
+          <div class="form-control">
+            <input
+              type="number"
+              name="company"
+              placeholder="Утасны дугаар "
+              required
+            />
+          </div>
+          <div class="form-control">
+            <!-- <input type="mes" name="number" placeholder="Мессеж" required /> -->
+            <textarea
+              name="text"
+              id="name"
+              placeholder="Мессеж оруулна уу? "
+            ></textarea>
+          </div>
+          <input type="submit" value="Илгээх" class="btn btn-primary" />
+        </form>
+      </div>
+      <div class="map"></div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer bg-dark py-2">
+      <div class="container grid grid-3">
+        <div>
+          <h1>Бауржан</h1>
+          <p>Copyright &copy; 2021</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Нүүр</a></li>
+            <li><a href="features.html">Онцлог</a></li>
+            <li><a href="docs.html">Холбоо барих</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a href="#"><i class="fab fa-github fa-2x"></i></a>
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_KLCZn2ceWKMsouD1Yq6c3xdHdAc2YOM&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

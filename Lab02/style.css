@@ -1,0 +1,7 @@
+h1 {
+  padding: 100px 5px;
+  transition: width 2s linear;
+  border-image: url("img/killya.jpg") 30 round;
+  /* transform: rotate(45deg); /* Equal to rotateZ(45deg) */
+  /* background-color: pink; */
+}
